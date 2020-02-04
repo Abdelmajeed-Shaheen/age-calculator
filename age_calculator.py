@@ -16,7 +16,7 @@ def calculate_age(year, month, day):
 		age = thisyear - yearint -1
 	else:
 		age = thisyear - yearint
-	print (age)
+	print ("You are "+str(age) +" years old.")
 
 def main():
 	year = input("Enter year of birth:")
