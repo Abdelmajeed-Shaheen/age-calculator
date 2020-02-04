@@ -2,7 +2,7 @@ import datetime
 
 def check_birthdate(year, month, day):
 	date = datetime.date(int(year),int(month),int(day))
-	if date < datetime.date.today():
+	if date <= datetime.date.today():
 		return True
 	else:
 		return False
@@ -10,8 +10,12 @@ def check_birthdate(year, month, day):
 
 def calculate_age(year, month, day):
 	yearint = int(year)
+	age = 0
 	thisyear = datetime.date.today().year
-	age = thisyear - yearint
+	if (int(month)>datetime.date.today().month):
+		age = thisyear - yearint -1
+	else:
+		age = thisyear - yearint
 	print (age)
 
 def main():
